@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+api_key="<%= @api_key %>"
+PROBY_TASK_ID="<%= @proby_task_id %>"
+
+function proby_api {
+
+  local action="${1}"
+
+  # Tell Proby that the "task" finished
+  curl \
+    --header "api_key: $api_key" \
+    --header "Content-Type: application/json" \
+    -X POST \
+    --silent \
+    https://proby.signalhq.com/api/v1/tasks/$PROBY_TASK_ID/${action}.json
+
+}
+
+proby_api start
+proby_api finish
