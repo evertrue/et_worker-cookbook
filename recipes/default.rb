@@ -9,7 +9,7 @@
 
 include_recipe "rds-s3-backups"
 
-node.set['postfix']['mail_relay_networks'] = node["ec2"]["network_interfaces_macs"][node["macaddress"].downcase]['vpc_ipv4_cidr_block'] if node["ec2"]
+node.set['postfix']['main']['mynetworks'] = node["ec2"]["network_interfaces_macs"][node["macaddress"].downcase]['vpc_ipv4_cidr_block'] if node["ec2"]
 
 include_recipe "postfix::server"
 include_recipe "et_worker::probymonitor"
