@@ -1,3 +1,12 @@
+## 1.2.8
+
+* Fix attribute used by postfix cookbook
+* Clean up Ruby code as per Rubocop
+
+## 1.2.7
+
+* Bump to postfix ~> 3.0.4
+
 ## 1.2.6
 
 * Tweaked Gemfile to use:
