@@ -1,3 +1,7 @@
+## 1.2.9
+
+* Add stale node checker
+
 ## 1.2.8
 
 * Fix attribute used by postfix cookbook
