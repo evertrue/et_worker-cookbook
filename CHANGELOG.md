@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Add Berks API server
+
 ## 1.2.9
 
 * Add stale node checker
