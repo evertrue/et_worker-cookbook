@@ -1,0 +1,58 @@
+{
+  "name": "stage-newvpc",
+  "description": "The staging environment for the new VPC",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "chef_env_long_name": "staging",
+    "newrelic": {
+      "agent_enabled": false
+    },
+    "ec2dnsserver": {
+      "zones": {
+        "vagrantup.com": {},
+        "priv.evertrue.com": {
+          "ptr_zone": false,
+          "ns_zone": "vagrantup.com",
+          "static_records": {
+            "stage-storm": {
+              "cookbook": "et_ops_haproxy"
+            }
+          },
+          "vpcs": [
+            "vpc-1e45b27b",
+            "vpc-9318d5f8"
+          ]
+        },
+        "10.in-addr.arpa": {
+          "ptr_zone": true,
+          "suffix": "priv.evertrue.com",
+          "ns_zone": "vagrantup.com",
+          "vpcs": [
+            "vpc-1e45b27b",
+            "vpc-9318d5f8"
+          ]
+        },
+        "test-cookbook-host.evertrue.com": {
+          "stub": true,
+          "ns_zone": "vagrantup.com",
+          "static_records": {
+            "cookbook": "et_ops_haproxy"
+          }
+        },
+        "test-value-host.evertrue.com": {
+          "stub": true,
+          "ns_zone": "vagrantup.com",
+          "static_records": {
+            "value": "1.1.1.1",
+            "type": "A"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "office",
+  "description": "The office",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "rsyslog": {
+      "remote_logs": false
+    },
+    "et_firewall": {
+      "domain": "corp.evertrue.com",
+      "static_hosts": [
+        {
+          "hostname": "tardis-pi",
+          "macaddress": "00:13:ef:c0:0e:ed",
+          "ipaddress": "172.16.1.200"
+        },
+        {
+          "hostname": "tardis-pi-wired",
+          "macaddress": "b8:27:eb:2e:52:ea",
+          "ipaddress": "172.16.1.100"
+        }
+      ]
+    }
+  }
+}
