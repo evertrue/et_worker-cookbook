@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: et_worker
+# Recipe:: probymonitor
+#
+# Copyright (C) 2013 EverTrue, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
+
 api_key = Chef::EncryptedDataBagItem.load(
     node['probymonitor']['api_key_databag'],
     node['probymonitor']['api_key_databag_item']
