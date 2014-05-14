@@ -1,21 +1,30 @@
-## 1.3.0
+et_worker cookbook CHANGELOG
+============================
+This file is used to list changes made in each version of the et_worker cookbook.
+
+v1.3.0 (2014-03-25)
+--------------
 
 * Add Berks API server
 
-## 1.2.9
+v1.2.9 (2014-03-07)
+--------------
 
 * Add stale node checker
 
-## 1.2.8
+v1.2.8 (2014-01-06)
+--------------
 
 * Fix attribute used by postfix cookbook
 * Clean up Ruby code as per Rubocop
 
-## 1.2.7
+v1.2.7 (2013-12-05)
+--------------
 
 * Bump to postfix ~> 3.0.4
 
-## 1.2.6
+v1.2.6 (2013-12-02)
+--------------
 
 * Tweaked Gemfile to use:
     * Berkshelf 2.10.0
@@ -23,29 +32,53 @@
     * kitchen-vagrant 0.12.0
 * Use generic email address for maintainer
 
-## 1.2.5
+v1.2.5 (2013-10-16)
+--------------
 
-## 1.2.4
+* Use v1.1.4 of rds-s3-backups
 
-## 1.2.3
+v1.2.4 (2013-10-16)
+--------------
 
-## 1.2.2:
+* Use rds-s3-backup v.1.13
+
+v1.2.3 (2013-10-15)
+--------------
+
+* Use v1.1.2 of rds-s3-backups
+
+v1.2.2 (2013-10-10)
+---------------
 
 * Revert to ~> 2.1 of postfix
 
-## 1.2.1:
+v1.2.1 (2013-10-03)
+---------------
 
-* Jeff needs to update this
+* Bump version to bring in postfix tweaks from v1.1.12 (briefly lost due to merging)
 
-## 1.1.1:
+v1.2.0 (2013-10-02)
+-------------------
+
+* Use v1.1.0 of rds-s3-backups cookbook
+
+v1.1.2 (2013-10-03)
+-------------------
+
+* Update postfix attribute & constrain postfix cookbook to ~> 3.0
+
+v1.1.1 (2013-09-04)
+---------------
 
 * Bump rds-s3-backups to 1.0.2
 
-## 1.1.0:
+v1.1.0 (2013-09-04)
+---------------
 
 * Add CHANGELOG
 * Add Proby Monitor
 
-## 1.0.1:
+v1.0.1 (2013-08-23)
+---------------
 
 * First rev
