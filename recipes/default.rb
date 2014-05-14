@@ -47,7 +47,7 @@ node.set['berkshelf']['api']['config_hash']['endpoints']['github']['options']['a
 
 # Chef::Log.info("Endpoints Hash: #{node['berkshelf']['api']['config']['endpoints_hash'].inspect}")
 
-endpoints = node['berkshelf']['api']['config_hash']['endpoints'].map do |k, v|
+endpoints = node['berkshelf']['api']['config_hash']['endpoints'].map do |_k, v|
   v
 end
 
