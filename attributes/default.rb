@@ -1,6 +1,6 @@
-set[:berkshelf][:api][:version] = '1.1.1'
+set['berkshelf']['api']['version'] = '1.1.1'
 
-set[:berkshelf][:api][:config_hash][:endpoints] = {
+set['berkshelf']['api']['config_hash']['endpoints'] = {
   chef_server: {
     type: 'chef_server',
     options: {
