@@ -8,7 +8,7 @@ version          '1.3.0'
 
 depends 'postfix', '~> 3.0.4'
 depends 'rds-s3-backups', '= 1.1.4'
-depends 'stale-node-checker', '= 1.0.1'
 depends 'berkshelf', '= 0.3.1'
+depends 'stale-node-checker', '= 1.0.2'
 
 provides 'worker'
