@@ -13,6 +13,4 @@ group :test do
   gem 'test-kitchen',    '~> 1.1'
   gem 'kitchen-vagrant', '~> 0.14'
   gem 'kitchen-ec2',     '>= 0.8'
-
-  gem 'fog', '~> 1.20'
 end
