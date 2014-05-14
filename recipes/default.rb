@@ -18,8 +18,7 @@ api_keys = Chef::EncryptedDataBagItem.load(
   )[node.chef_environment]
 
 if api_keys.nil?
-  fail "Data bag secrets/api_keys is missing environment " \
-    "#{node.chef_environment}"
+  fail "Data bag secrets/api_keys is missing environment #{node.chef_environment}"
 end
 
 directory node['berkshelf']['api']['home'] do
