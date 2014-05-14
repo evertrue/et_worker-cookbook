@@ -1,6 +1,7 @@
-set['berkshelf']['api']['version'] = '1.1.1'
+set['berkshelf_api']['version'] = '1.1.1'
 
-set['berkshelf']['api']['config_hash']['endpoints'] = {
+set['berkshelf_api']['config'] = {
+  home_path: node['berkshelf_api']['home'],
   chef_server: {
     type: 'chef_server',
     options: {
