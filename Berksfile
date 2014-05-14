@@ -10,6 +10,4 @@ cookbook 'stale-node-checker',
          tag: 'v1.0.2'
          # path: '../stale-node-checker'
 cookbook 'berkshelf-api',
-         git: 'git@github.com:berkshelf/berkshelf-api.git',
-         tag: 'v1.3.1',
-         rel: 'cookbook'
+         path: '../berkshelf-api/cookbook'
