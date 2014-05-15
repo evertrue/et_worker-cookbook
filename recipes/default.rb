@@ -41,7 +41,7 @@ node.set['berkshelf_api']['config'] = {
     type: 'github',
     options: {
       organization: 'evertrue',
-      access_token: api_keys['github']
+      access_token: api_keys['github']['berkshelf']
     }
   }
 }
