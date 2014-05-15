@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe 'et_worker::probymonitor' do
-  let(:chef_run) do
-    ChefSpec::Runner.new(platform: 'ubuntu', version: '12.04') do |node|
-      # node.set['probymonitor']['task_id'] = ''
-    end.converge(described_recipe)
-  end
+  let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
   before do
     Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'api_keys').and_return(
