@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.4.1 (2014-05-15)
+-------------------
+* Fix setting of GitHub token used by Berkshelf API in default recipe
+
+
 v1.4.0 (2014-05-15)
 -------------------
 * Fix up to use Berkshelf 3
