@@ -2,6 +2,16 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.4.0 (2014-05-15)
+-------------------
+* Fix up to use Berkshelf 3
+* Clean up Test Kitchen config
+* Foodcritic & Rubocop fixes
+* Use GitHub for stale-node-checker cookbook source
+* Use berkshelf-api cookbook v1.3.1 instead of deprecated berkshelf-cookbook
+* Add ChefSpec tests (all passing!)
+
+
 v1.3.0 (2014-03-25)
 --------------
 
