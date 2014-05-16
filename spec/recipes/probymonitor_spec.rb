@@ -4,9 +4,8 @@ describe 'et_worker::probymonitor' do
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
   before do
-    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'api_keys').and_return(
-      'probymonitor' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-    )
+    mock_encrypted_data_bag_items
+    stub_berkshelf_api_command
   end
 
   it 'creates /usr/bin/probymonitor.sh' do
