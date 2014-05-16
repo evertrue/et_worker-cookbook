@@ -32,13 +32,6 @@ node.set['berkshelf_api']['config'] = {
       options: {
         url: 'http://cookbooks.opscode.com/api/v1'
       }
-    },
-    {
-      type: 'github',
-      options: {
-        organization: 'evertrue',
-        access_token: api_keys['github']['berkshelf']
-      }
     }
   ]
 }
