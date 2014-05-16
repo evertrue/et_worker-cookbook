@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.6.0 (2014-05-16)
+-------------------
+* Remove GitHub as a Berkshelf API server endpoint
+
+
 v1.5.2 (2014-05-16)
 -------------------
 * Fix syntax of Berkshelf API config (arrays do not have named items)
