@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.5.1 (2014-05-16)
+-------------------
+* Fix setting of Berkshelf API configuration, as the endpoints in `node['berkshelf_api']['config'` need to be wrapped in an `endpoints` array inside the config hash
+
+
 v1.5.0 (2014-05-16)
 -------------------
 * Break out Berkshelf API setup to separate recipe, and adjust ChefSpec tests to follow suit
