@@ -26,12 +26,6 @@ node.set['berkshelf_api']['config'] = {
         client_name: 'berkshelf',
         client_key: '/etc/berkshelf/api-server/client.pem'
       }
-    },
-    {
-      type: 'opscode',
-      options: {
-        url: 'http://cookbooks.opscode.com/api/v1'
-      }
     }
   ]
 }
