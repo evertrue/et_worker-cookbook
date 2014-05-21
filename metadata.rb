@@ -10,5 +10,6 @@ depends 'postfix', '~> 3.0.4'
 depends 'rds-s3-backups', '= 1.1.4'
 depends 'stale-node-checker', '= 1.0.2'
 depends 'berkshelf-api-server', '= 1.4.0'
+depends 'route53', '= 0.3.3'
 
 provides 'worker'
