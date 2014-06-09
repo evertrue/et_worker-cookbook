@@ -39,7 +39,7 @@ end
 def stub_berkshelf_api_command
   # Stubbing a command that's executed in the Berkshelf API cookbook
   stub_command(
-    'cd /opt/berkshelf-api/v1.3.1 && /opt/chef/embedded/bin/bundle check'
+    'cd /opt/berkshelf-api/v1.4.0 && /opt/chef/embedded/bin/bundle check'
   ).and_return(
     'The Gemfile\'s dependencies are satisfied'
   )

@@ -12,8 +12,8 @@ describe 'et_worker::berkshelf_api' do
     stub_berkshelf_api_command
   end
 
-  it 'includes berkshelf-api' do
-    expect(chef_run).to include_recipe 'berkshelf-api'
+  it 'includes berkshelf-api-server' do
+    expect(chef_run).to include_recipe 'berkshelf-api-server'
   end
 
   it 'creates /etc/berkshelf/api-server/client.pem' do

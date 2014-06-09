@@ -30,7 +30,7 @@ node.set['berkshelf_api']['config'] = {
   ]
 }
 
-include_recipe 'berkshelf-api'
+include_recipe 'berkshelf-api-server'
 
 file node['berkshelf_api']['home'] + '/client.pem' do
   content api_keys['chef']['berkshelf']
