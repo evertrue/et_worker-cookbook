@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.7.0 (2014-06-09)
+-------------------
+
+* Use v1.4.0 of newly-renamed, community-site-provided, berkshelf-api-server cookbook
+
+
 v1.6.1 (2014-05-21)
 -------------------
 * Remove Chef Community site from Berkshelf API endpoints
