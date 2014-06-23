@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'fog'
+require 'json'
+
+module EverTools
+  class DownloadZoneData
+    def connection
+      @connection ||= Fog::DNS::AWS.new
+    end
+
+    def initialize(args)
+      @search_zones = args
+    end
+
+    def zone_objs
+      connection.zones.select { |z| @search_zones.include?(z.domain) }
+    end
+
+    def run
+      results = { 'id' => 'zones' }
+      zone_objs.each do |z_o|
+        results[z_o.domain.sub(/\.$/, '')] = {
+          'id' => z_o.id,
+          'data' => JSON.parse(
+            z_o.records.reject { |r| r.type == 'NS' }.to_json
+          )
+        }
+      end
+
+      puts JSON.pretty_generate results
+    end
+  end
+end
+
+dzd = EverTools::DownloadZoneData.new(ARGV)
+dzd.run
