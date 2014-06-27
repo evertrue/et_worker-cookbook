@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.8.0 (2014-06-27)
+-------------------
+
+* Add Zone Manager functionality
+
+
 v1.7.1 (2014-06-09)
 -------------------
 
