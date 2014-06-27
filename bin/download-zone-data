@@ -20,14 +20,22 @@ module EverTools
       end
     end
 
+    def clean_records(zone_object)
+      zone_records = []
+      zone_object.records.reject { |r| r.type == 'NS' }.each do |r|
+        record = r.attributes
+        record[:name] = record[:name].sub(/\.$/, '')
+        zone_records << record
+      end
+      zone_records
+    end
+
     def run
       results = { 'id' => 'zones' }
       zone_objs.each do |z_o|
         results[z_o.domain.sub(/\.$/, '')] = {
           'id' => z_o.id,
-          'data' => JSON.parse(
-            z_o.records.reject { |r| r.type == 'NS' }.to_json
-          )
+          'data' => clean_records(z_o)
         }
       end
 
