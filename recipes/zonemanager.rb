@@ -1,3 +1,8 @@
+execute 'apt-get update' do
+  command 'apt-get update'
+  action  :nothing
+end.run_action(:run)
+
 include_recipe 'route53'
 
 data_bag_data = data_bag_item('dns', 'zones')
