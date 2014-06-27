@@ -17,6 +17,7 @@ platforms:
 suites:
   - name: default
     run_list:
+    - recipe[apt]
     - recipe[et_worker]
     - recipe[et_worker::zonemanager]
     attributes:
