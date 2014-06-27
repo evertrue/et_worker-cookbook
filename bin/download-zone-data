@@ -14,7 +14,10 @@ module EverTools
     end
 
     def zone_objs
-      connection.zones.select { |z| @search_zones.include?(z.domain) }
+      connection.zones.select do |z|
+        @search_zones.include?(z.domain) ||
+        @search_zones.include?(z.domain.sub(/\.$/, ''))
+      end
     end
 
     def run
