@@ -7,9 +7,9 @@ creds = Chef::EncryptedDataBagItem.load(
 )[node['route53']['aws_user']]
 
 node['route53']['zones'].each do |zone|
-  z_data = data_bag_data[zone]['data']
+  z_data = EtWorker::ZoneManager.new(data_bag_data[zone], creds)
 
-  z_data.each_with_index do |record, i|
+  z_data.updated.each_with_index do |record, i|
     route53_record "#{zone}_#{i}_#{record['name']}_#{record['type']}" do
       name                  record['name']
       value                 record['value']
