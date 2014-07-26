@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.8.1 (2014-07-26)
+-------------------
+
+* Make apt-get update conditional on being a debian system
+
 v1.8.0 (2014-06-27)
 -------------------
 
