@@ -1,7 +1,9 @@
-execute 'apt-get update' do
-  command 'apt-get update'
-  action  :nothing
-end.run_action(:run)
+if node['platform_family'] == 'debian'
+  execute 'apt-get update' do
+    command 'apt-get update'
+    action  :nothing
+  end.run_action(:run)
+end
 
 include_recipe 'route53'
 
