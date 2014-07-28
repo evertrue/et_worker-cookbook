@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.8.2 (2014-07-27)
+-------------------
+
+* Remove empty zones definition from attributes
+
 v1.8.1 (2014-07-26)
 -------------------
 
