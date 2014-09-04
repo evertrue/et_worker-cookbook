@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v1.8.3 (2014-09-04)
+-------------------
+
+* Include ssh known hosts cacher
+
 v1.8.2 (2014-07-27)
 -------------------
 
