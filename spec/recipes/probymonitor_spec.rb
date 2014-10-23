@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'et_worker::probymonitor' do
-  let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
+  let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
   before do
     mock_encrypted_data_bag_items
