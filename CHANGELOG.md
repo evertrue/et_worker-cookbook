@@ -2,6 +2,13 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v2.0.0 (2014-10-23)
+-------------------
+
+* Uninstall RDS → S3 backup
+* Refactor tests
+* Clean up cruft
+
 v1.8.3 (2014-09-04)
 -------------------
 
