@@ -6,7 +6,7 @@ RSpec.configure do |config|
 end
 
 def mock_encrypted_data_bag_items
-  Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'database_credentials').and_return(
+  allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'database_credentials').and_return(
     '_default' => {
       'admin' => {
         'username' => '@@TESTING_USER@@',
@@ -15,14 +15,14 @@ def mock_encrypted_data_bag_items
     }
   )
 
-  Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'aws_credentials').and_return(
+  allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'aws_credentials').and_return(
     'etworkerbackup' => {
       'access_key_id' => 'SAMPLE_ACCESS_KEY_ID',
       'secret_access_key' => 'SECRET_ACCESS_KEY'
     }
   )
 
-  Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'api_keys').and_return(
+  allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'api_keys').and_return(
     'probymonitor' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     '_default' => {
       'chef' => {
