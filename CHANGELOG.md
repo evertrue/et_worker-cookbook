@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v2.0.1 (2014-10-24)
+-------------------
+
+* Use pessimistic versioning for `rds-s3-backups` to pick up bugfixes
+
 v2.0.0 (2014-10-23)
 -------------------
 
