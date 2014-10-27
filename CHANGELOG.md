@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v2.0.2 (2014-10-27)
+-------------------
+
+* Use community version of `route53` cookbook
+    - Our fixes shipped upstream, and there's [other goodies too](https://supermarket.getchef.com/cookbooks/route53/versions/0.3.6#changelog)
+
 v2.0.1 (2014-10-24)
 -------------------
 
