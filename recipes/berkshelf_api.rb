@@ -35,8 +35,8 @@ include_recipe 'berkshelf-api-server'
 file node['berkshelf_api']['home'] + '/client.pem' do
   content api_keys['chef']['berkshelf']
   mode 0600
-  owner 'root'
-  group 'root'
+  owner node['berkshelf_api']['owner']
+  group node['berkshelf_api']['group']
   notifies :restart, 'runit_service[berks-api]'
 end
 
