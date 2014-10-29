@@ -2,6 +2,14 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.0 (2014-10-29)
+-------------------
+
+* Bump berkshelf-api-server version to 2.1.0
+* Set client.pem owner to berkshelf api owner
+* Upgrade a bunch of Gems
+* Remove (seemingly unnecessary) attributes file specifying berkshelf api version
+
 v2.0.2 (2014-10-27)
 -------------------
 
