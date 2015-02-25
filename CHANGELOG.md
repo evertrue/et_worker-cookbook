@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.1 (2015-02-24)
+-------------------
+
+* Update nginx source checksum to work aroud [3a01b71](https://github.com/miketheman/nginx/commit/3a01b71b186f0005cf1d8486b7f22d8aa0408e68)
+
 v3.0.0 (2014-10-29)
 -------------------
 
