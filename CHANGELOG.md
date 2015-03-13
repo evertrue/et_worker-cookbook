@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.2 (2015-03-13)
+-------------------
+
+* Relax postfix version constraint
+
 v3.0.1 (2015-02-24)
 -------------------
 
