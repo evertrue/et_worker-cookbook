@@ -12,6 +12,5 @@ depends 'stale-node-checker', '= 1.0.2'
 depends 'berkshelf-api-server', '= 2.1.0'
 depends 'route53', '= 0.3.6'
 depends 'ssh_known_hosts'
-depends 'docker-registry', '~> 0.0'
 
 provides 'worker'
