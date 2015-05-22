@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.5 (2015-05-22)
+-------------------
+
+* require fog/aws instead of fog/aws/dns (which is no longer a thing)
+
 v3.0.4 (2015-05-22)
 -------------------
 
