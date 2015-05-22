@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.4 (2015-05-22)
+-------------------
+
+* Bump berkshelf-api-server 2.1.1
+
 v3.0.3 (2015-05-22)
 -------------------
 
