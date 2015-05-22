@@ -28,7 +28,7 @@ module EtWorker
 
     def connection
       @connection ||= begin
-        require 'fog/aws/dns'
+        require 'fog/aws'
         ::Fog::DNS::AWS.new(
           aws_access_key_id: @credentials['access_key_id'],
           aws_secret_access_key: @credentials['secret_access_key']
