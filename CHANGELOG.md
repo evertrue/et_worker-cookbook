@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.3 (2015-05-22)
+-------------------
+
+* Bump route53 to 0.4.0
+* Remove the docker-registry cookbook
+
 v3.0.2 (2015-03-13)
 -------------------
 
