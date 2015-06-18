@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.6 (2015-06-18)
+-------------------
+
+* Stop pinning the nginx checksum ([3a01b71](miketheman/nginx@3a01b71) resolved)
+
 v3.0.5 (2015-05-22)
 -------------------
 
