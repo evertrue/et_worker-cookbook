@@ -41,5 +41,5 @@ file node['berkshelf_api']['home'] + '/client.pem' do
 end
 
 runit_service 'berks-api' do
-  action :start
+  cookbook 'berkshelf-api-server'
 end
