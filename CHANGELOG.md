@@ -2,6 +2,13 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.7 (2015-06-22)
+-------------------
+
+* Test on ubuntu 14.04
+* Place build essential compile-time attribute in attributes file
+* For runit_service resource: remove the action and include the cookbook where the template is located
+
 v3.0.6 (2015-06-18)
 -------------------
 
