@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.0.8 (2015-08-11)
+-------------------
+
+* Require minimum fog-aws gem version
+
 v3.0.7 (2015-06-22)
 -------------------
 
