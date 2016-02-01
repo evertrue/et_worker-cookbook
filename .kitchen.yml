@@ -1,9 +1,19 @@
 ---
 driver:
-  name: vagrant
-  customize:
-    cpus: 4
-    memory: 1536
+  name: ec2
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
+  region: us-east-1
+  availability_zone: us-east-1b
+  security_group_ids:
+    - ci-testing
+  instance_type: c3.large
+  tags:
+    Env: public
+    Type: test
+
+transport:
+  interface: public
+  ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
 
 provisioner:
   name: chef_zero
@@ -13,9 +23,14 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
+    driver:
+      image_id: ami-c61a3fac
 
 suites:
   - name: default
+    driver:
+      tags:
+        Name: et_worker-default-ubuntu-1404
     run_list:
       - recipe[apt]
       - recipe[et_worker]
