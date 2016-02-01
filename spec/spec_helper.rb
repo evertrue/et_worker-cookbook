@@ -6,15 +6,6 @@ RSpec.configure do |config|
 end
 
 def mock_encrypted_data_bag_items
-  allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'database_credentials').and_return(
-    '_default' => {
-      'admin' => {
-        'username' => '@@TESTING_USER@@',
-        'password' => '@@TESTING_PASS@@'
-      }
-    }
-  )
-
   allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'aws_credentials').and_return(
     'etworkerbackup' => {
       'access_key_id' => 'SAMPLE_ACCESS_KEY_ID',
