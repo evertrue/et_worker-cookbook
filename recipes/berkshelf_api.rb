@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-api_keys = Chef::EncryptedDataBagItem.load(
+api_keys = data_bag_item(
     'secrets',
     'api_keys'
   )[node.chef_environment]

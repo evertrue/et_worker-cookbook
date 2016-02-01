@@ -8,7 +8,7 @@ end
 include_recipe 'route53'
 
 data_bag_data = data_bag_item('dns', 'zones')
-creds = Chef::EncryptedDataBagItem.load(
+creds = data_bag_item(
   'secrets',
   'aws_credentials'
 )[node['route53']['aws_user']]
