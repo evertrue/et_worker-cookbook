@@ -17,11 +17,11 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[apt]
-    - recipe[et_worker]
-    - recipe[et_worker::zonemanager]
+      - recipe[apt]
+      - recipe[et_worker]
+      - recipe[et_worker::zonemanager]
     attributes:
       route53:
         aws_user: Route53_test
         zones:
-        - evertruetest.com
+          - evertruetest.com
