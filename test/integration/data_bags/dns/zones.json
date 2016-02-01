@@ -362,14 +362,6 @@
       },
       {
         "value": [
-          "prod-api-lb.evertruetest.com."
-        ],
-        "name": "redsapi.evertruetest.com",
-        "type": "CNAME",
-        "ttl": "300"
-      },
-      {
-        "value": [
           "prod-api-lb.evertruetest.com"
         ],
         "name": "reporting.evertruetest.com",
@@ -501,14 +493,6 @@
           "elb-stage-ops-haproxy-685877867.us-east-1.elb.amazonaws.com"
         ],
         "name": "stage-ops-lb.evertruetest.com",
-        "type": "CNAME",
-        "ttl": "300"
-      },
-      {
-        "value": [
-          "stage-api-lb.evertruetest.com"
-        ],
-        "name": "stage-reds.evertruetest.com",
         "type": "CNAME",
         "ttl": "300"
       },

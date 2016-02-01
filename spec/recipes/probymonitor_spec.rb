@@ -8,27 +8,11 @@ describe 'et_worker::probymonitor' do
     stub_berkshelf_api_command
   end
 
-  it 'creates /usr/bin/probymonitor.sh' do
-    expect(chef_run).to create_template('/usr/bin/probymonitor.sh').with(
-      user: 'root',
-      group: 'root',
-      mode: 00755
-    )
-    expect(chef_run).to render_file('/usr/bin/probymonitor.sh').with_content(
-      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-    )
+  it 'deletes /usr/bin/probymonitor.sh' do
+    expect(chef_run).to delete_template '/usr/bin/probymonitor.sh'
   end
 
-  it 'creates a probymonitor cron' do
-    expect(chef_run).to create_cron('probymonitor').with(
-      hour: '*',
-      minute: '*',
-      day: '*',
-      month: '*',
-      weekday: '*',
-      user: 'nobody',
-      shell: '/bin/bash',
-      command: '/usr/bin/probymonitor.sh'
-    )
+  it 'deletes a probymonitor cron' do
+    expect(chef_run).to delete_cron 'probymonitor'
   end
 end
