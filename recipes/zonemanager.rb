@@ -23,8 +23,8 @@ node['route53']['zones'].each do |zone|
       type                  record['type']
       ttl                   record['ttl'].to_i
       zone_id               data_bag_data[zone]['id']
-      aws_access_key_id     creds['access_key_id']
-      aws_secret_access_key creds['secret_access_key']
+      aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
+      aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
     end
   end
 
@@ -33,8 +33,8 @@ node['route53']['zones'].each do |zone|
       name                  record['name']
       type                  record['type']
       zone_id               data_bag_data[zone]['id']
-      aws_access_key_id     creds['access_key_id']
-      aws_secret_access_key creds['secret_access_key']
+      aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
+      aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
       action                :delete
     end
   end

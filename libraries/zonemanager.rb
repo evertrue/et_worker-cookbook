@@ -26,14 +26,20 @@ module EtWorker
       zone_data.map { |r| { 'name' => r['name'], 'type' => r['type'] } }
     end
 
+    def credentials_opts
+      return { use_iam_profile: true } if @credentials['use_iam_profile']
+
+      {
+        aws_access_key_id: @credentials['access_key_id'],
+        aws_secret_access_key: @credentials['secret_access_key']
+      }
+    end
+
     def connection
       @connection ||= begin
         gem 'fog-aws', '>= 0.7'
         require 'fog/aws'
-        ::Fog::DNS::AWS.new(
-          aws_access_key_id: @credentials['access_key_id'],
-          aws_secret_access_key: @credentials['secret_access_key']
-        )
+        ::Fog::DNS::AWS.new credentials_opts
       end
     end
 
