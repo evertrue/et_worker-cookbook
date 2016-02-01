@@ -19,8 +19,8 @@ describe 'et_worker::berkshelf_api' do
   it 'creates /etc/berkshelf/api-server/client.pem' do
     client_pem_resource = chef_run.file('/etc/berkshelf/api-server/client.pem')
     expect(chef_run).to create_file('/etc/berkshelf/api-server/client.pem').with(
-      user: 'root',
-      group: 'root',
+      user: 'berkshelf',
+      group: 'berkshelf',
       mode: 0600
     )
     expect(chef_run).to render_file('/etc/berkshelf/api-server/client.pem').with_content(
