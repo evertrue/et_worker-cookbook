@@ -23,7 +23,6 @@ def mock_encrypted_data_bag_items
   )
 
   allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'api_keys').and_return(
-    'probymonitor' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     '_default' => {
       'chef' => {
         'berkshelf' => "-----BEGIN RSA PRIVATE KEY-----\nDUMMY_KEY\n-----END RSA PRIVATE KEY-----\n"
