@@ -35,7 +35,7 @@ node['route53']['zones'].each do |zone|
       zone_id               data_bag_data[zone]['id']
       aws_access_key_id     creds['access_key_id']
       aws_secret_access_key creds['secret_access_key']
-      action               :delete
+      action                :delete
     end
   end
 end
