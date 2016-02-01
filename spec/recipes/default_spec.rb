@@ -2,8 +2,10 @@ require 'spec_helper'
 
 describe 'et_worker::default' do
   let(:chef_run) do
-    ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04') do |node|
+    ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04') do |node, server|
       node.set['berkshelf_api']['home'] = '/etc/berkshelf/api-server'
+
+      server.update_node node
     end.converge(described_recipe)
   end
 
