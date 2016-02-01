@@ -4,7 +4,6 @@ describe 'et_worker::probymonitor' do
   let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
   before do
-    mock_encrypted_data_bag_items
     stub_berkshelf_api_command
   end
 
