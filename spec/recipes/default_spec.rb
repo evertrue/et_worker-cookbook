@@ -24,6 +24,7 @@ describe 'et_worker::default' do
 
   before do
     stub_berkshelf_api_command
+    stub_probymonitor_test
   end
 
   %w(

@@ -5,6 +5,7 @@ describe 'et_worker::probymonitor' do
 
   before do
     stub_berkshelf_api_command
+    stub_probymonitor_test
   end
 
   it 'deletes /usr/bin/probymonitor.sh' do
