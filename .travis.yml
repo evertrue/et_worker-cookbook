@@ -33,8 +33,8 @@ script:
 - kitchen test -d always -c
 env:
   global:
-  - secure: AvZe6aWjqVOTYJx7mSIx//x16ObcBVPdO3Szo9qI9KJb3ipWLQ6uj2WVQ++8ydikwzdL4j2+vOpNfNiJqnCspjEbALitE5e6Joi9Ei+mBmUmAjQ0xLpnM981NpX/2XlrkUR7P+H38dOty1cuT9++9+fLqPGE2yF+RVWO8/95zaY=
-  - secure: UyUlIBZvw/D6+CbJxZ1d/P+pabmFexLpCwyGU80I+uaJcsuZ3x2VPQdmqzABJN7BlESuycfaUSDEa+CQRVSS6qWxzY8UNtETbK8oSUJ0HivfmtOwmmDZU4gbf/j0u7NzOkIjs721il2Adwg2s63/G/XvJoBUfqMgI44+w3BaTXs=
+  - secure: ZijQDrd2oXEpP4WBrLpR3I+22WE/SDam+qu0MI7I9w88TbSZnWSxUJ3zs/BDg8LDWyMIhsAKnB5ZVbyqjPL9gEAa1n5WZ3FCzIvbXJXN4CtBKijpdjUx3rZFjmFnVBrxRR+wSifQdVkPwyh8cxROSNA3h8tS+lc2PYQSY5V8HzE=
+  - secure: OZKRm+8AiMCxvnRI14pjyJtNMuYowZgkJs5FbPciO2nEAEy9JvB9KAfCkFzIrNPaF56IcDA4Damyu3H+wW4PqBqEoZsONrHgcezyvp3vFZZj1fAF1SvbvT+usBn64aHw1Jexc77p4HY5riQa1FtVvGcvXDMgXVfL84VbhVp/IUU=
 notifications:
   slack:
     secure: fyfJ/sn+laqrUdHAUobeUQNGsebU79G79Rc7iWnEP9ebe3GjnO7UqdunPDsVUol57a8B8dBFBtmQJ1wrpNek13KkHvvWGieRP2Znj3fmwllp86ac2A1CzLTEn+CfJhX240N5AQ+AvPQQOXNODWPqJd2qi6A+LOd1JLPKUvn30+M=
