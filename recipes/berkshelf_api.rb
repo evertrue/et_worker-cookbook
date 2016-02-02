@@ -8,9 +8,9 @@
 #
 
 api_keys = data_bag_item(
-    'secrets',
-    'api_keys'
-  )[node.chef_environment]
+  'secrets',
+  'api_keys'
+)[node.chef_environment]
 
 if api_keys.nil?
   fail "Data bag secrets/api_keys is missing environment #{node.chef_environment}"
