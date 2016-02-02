@@ -4,7 +4,7 @@ maintainer_email 'devops@evertrue.com'
 license          'All rights reserved'
 description      'Installs/Configures et_worker'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '3.0.8'
+version          '3.1.0'
 
 depends 'postfix', '~> 3.1'
 depends 'rds-s3-backups', '~> 1.2'

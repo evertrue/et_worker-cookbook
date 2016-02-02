@@ -2,6 +2,22 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.1.0 (2016-02-02)
+-------------------
+
+* Remove Proby monitoring
+    - Proby is defunct, so let’s delete it
+    - A future release will drop this code entirely
+* Provide ability to use an IAM Profile instead of AWS access & secret keys for the Route 53 zone manager
+* Clean up code
+* Shift to testing using EC2
+* Automate testing using Travis CI
+* Drop as much encrypted data bag items as possible from test suites
+    - Made possible by the adoption of IAM profiles
+* Upgrade to using `data_bag_item` for all loading, thanks to Chef 12
+* Improve on ChefSpec data bag mocking thanks to recent improvements
+* Drop Gem/Rakefile, thanks to Chef DK
+
 v3.0.8 (2015-08-11)
 -------------------
 
