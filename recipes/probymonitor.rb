@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-template '/usr/bin/probymonitor.sh' do
+file '/usr/bin/probymonitor.sh' do
   action :delete
   only_if 'test -e /usr/bin/probymonitor.sh'
 end

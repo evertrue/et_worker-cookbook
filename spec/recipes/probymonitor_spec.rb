@@ -8,7 +8,7 @@ describe 'et_worker::probymonitor' do
   end
 
   it 'deletes /usr/bin/probymonitor.sh' do
-    expect(chef_run).to delete_template '/usr/bin/probymonitor.sh'
+    expect(chef_run).to delete_file '/usr/bin/probymonitor.sh'
   end
 
   it 'deletes a probymonitor cron' do
