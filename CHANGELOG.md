@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v3.1.1 (2016-02-02)
+-------------------
+
+* Fix Proby removal to work without template
+* Fix ChefSpec tests to work with Proby `only_if` guard
+
 v3.1.0 (2016-02-02)
 -------------------
 
