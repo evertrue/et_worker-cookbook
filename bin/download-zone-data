@@ -16,7 +16,7 @@ module EverTools
     def zone_objs
       connection.zones.select do |z|
         @search_zones.include?(z.domain) ||
-        @search_zones.include?(z.domain.sub(/\.$/, ''))
+          @search_zones.include?(z.domain.sub(/\.$/, ''))
       end
     end
 
