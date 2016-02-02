@@ -12,5 +12,6 @@ depends 'stale-node-checker', '= 1.0.2'
 depends 'berkshelf-api-server', '= 2.1.1'
 depends 'route53', '= 0.4.0'
 depends 'ssh_known_hosts'
+depends 'apt'
 
 provides 'worker'

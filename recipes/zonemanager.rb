@@ -1,14 +1,17 @@
-if node['platform_family'] == 'debian'
-  execute 'apt-get update' do
-    command 'apt-get update'
-    action  :nothing
-  end.run_action(:run)
-end
+#
+# Cookbook Name:: et_worker
+# Recipe:: zonemanager
+#
+# Copyright (C) 2013 EverTrue, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
 
+include_recipe 'apt'
 include_recipe 'route53'
 
 data_bag_data = data_bag_item('dns', 'zones')
-creds = Chef::EncryptedDataBagItem.load(
+creds = data_bag_item(
   'secrets',
   'aws_credentials'
 )[node['route53']['aws_user']]
@@ -23,8 +26,8 @@ node['route53']['zones'].each do |zone|
       type                  record['type']
       ttl                   record['ttl'].to_i
       zone_id               data_bag_data[zone]['id']
-      aws_access_key_id     creds['access_key_id']
-      aws_secret_access_key creds['secret_access_key']
+      aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
+      aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
     end
   end
 
@@ -33,9 +36,9 @@ node['route53']['zones'].each do |zone|
       name                  record['name']
       type                  record['type']
       zone_id               data_bag_data[zone]['id']
-      aws_access_key_id     creds['access_key_id']
-      aws_secret_access_key creds['secret_access_key']
-      action               :delete
+      aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
+      aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
+      action                :delete
     end
   end
 end
