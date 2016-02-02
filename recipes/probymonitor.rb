@@ -9,6 +9,7 @@
 
 template '/usr/bin/probymonitor.sh' do
   action :delete
+  only_if 'test -e /usr/bin/probymonitor.sh'
 end
 
 cron 'probymonitor' do
