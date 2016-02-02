@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: et_worker
+# Recipe:: zonemanager
+#
+# Copyright (C) 2013 EverTrue, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
+
 if node['platform_family'] == 'debian'
   execute 'apt-get update' do
     command 'apt-get update'
