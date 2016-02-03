@@ -15,7 +15,3 @@ def stub_berkshelf_api_command
     'The Gemfile\'s dependencies are satisfied'
   )
 end
-
-def stub_probymonitor_test
-  stub_command("test -e /usr/bin/probymonitor.sh").and_return false
-end
