@@ -1,4 +1,4 @@
-# et_worker cookbook
+# et_worker cookbook [![Build Status](https://travis-ci.org/evertrue/et_worker-cookbook.svg?branch=master)](https://travis-ci.org/evertrue/et_worker-cookbook)
 
 # Requirements
 
