@@ -2,6 +2,14 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v4.0.0 (2016-02-03)
+-------------------
+
+* Remove rds-s3-backups references
+    - This broke w/ the removal of the ET Berkshelf API server in any case
+* Remove Proby recipe & tests
+    - v3.1.0 uninstalled this defunct monitoring, this strips the code out of this cookbook
+
 v3.1.1 (2016-02-02)
 -------------------
 
