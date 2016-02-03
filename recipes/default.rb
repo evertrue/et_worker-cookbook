@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'rds-s3-backups::uninstall'
-
 node.set['postfix']['main']['mynetworks'] =
   node['ec2']['network_interfaces_macs'][node['macaddress'].downcase]['vpc_ipv4_cidr_block'] if node['ec2']
 

@@ -28,7 +28,6 @@ describe 'et_worker::default' do
   end
 
   %w(
-    rds-s3-backups::uninstall
     postfix::server
     et_worker::probymonitor
     stale-node-checker

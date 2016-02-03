@@ -7,7 +7,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '3.1.1'
 
 depends 'postfix', '~> 3.1'
-depends 'rds-s3-backups', '~> 1.2'
 depends 'stale-node-checker', '= 1.0.2'
 depends 'berkshelf-api-server', '= 2.1.1'
 depends 'route53', '= 0.4.0'
