@@ -12,5 +12,4 @@ node.set['postfix']['main']['mynetworks'] =
 
 include_recipe 'postfix::server'
 include_recipe 'stale-node-checker'
-include_recipe 'et_worker::berkshelf_api'
 include_recipe 'ssh_known_hosts::cacher'
