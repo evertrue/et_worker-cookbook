@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v5.0.0 (2016-04-12)
+-------------------
+
+* Remove Berkshelf API server
+
 v4.0.0 (2016-02-03)
 -------------------
 
