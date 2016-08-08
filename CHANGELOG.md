@@ -2,6 +2,11 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v5.0.1 (2016-08-08)
+-------------------
+
+* Add a brief delay to each route53_record call to avoid throttling
+
 v5.0.0 (2016-04-12)
 -------------------
 
