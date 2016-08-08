@@ -28,6 +28,10 @@ node['route53']['zones'].each do |zone|
       zone_id               data_bag_data[zone]['id']
       aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
       aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
+
+      # The following is required until
+      # https://github.com/chef-cookbooks/route53/issues/79 is addressed
+      not_if                'sleep 0.3; false', timeout: 1
     end
   end
 
@@ -39,6 +43,10 @@ node['route53']['zones'].each do |zone|
       aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
       aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
       action                :delete
+
+      # The following is required until
+      # https://github.com/chef-cookbooks/route53/issues/79 is addressed
+      not_if                'sleep 0.3; false', timeout: 1
     end
   end
 end
