@@ -11,5 +11,6 @@ depends 'stale-node-checker', '= 1.0.2'
 depends 'route53', '= 0.4.0'
 depends 'ssh_known_hosts'
 depends 'apt'
+depends 'cron'
 
 provides 'worker'
