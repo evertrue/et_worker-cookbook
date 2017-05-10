@@ -1,19 +1,21 @@
 ---
 driver:
   name: ec2
+  require_chef_omnibus: 12.17.44
   aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
   region: us-east-1
   availability_zone: us-east-1b
   security_group_ids:
     - ci-testing
   instance_type: c3.large
+  interface: public
   iam_profile_name: test-et_worker-zonemanager
   tags:
     Env: public
     Type: test
 
 transport:
-  interface: public
+  name: sftp
   ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
 
 provisioner:
@@ -24,8 +26,6 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-    driver:
-      image_id: ami-c61a3fac
 
 suites:
   - name: default
