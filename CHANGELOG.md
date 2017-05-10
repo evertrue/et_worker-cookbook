@@ -2,6 +2,12 @@ et_worker cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the et_worker cookbook.
 
+v5.1.0 (2017-05-10)
+-------------------
+
+* Add AWS cleanup cron job
+* Clean up test environment
+
 v5.0.1 (2016-08-08)
 -------------------
 
