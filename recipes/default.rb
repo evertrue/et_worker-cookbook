@@ -29,5 +29,5 @@ gem_package 'aws-cleanup'
 
 cron_d 'awscleanup' do
   minute 20
-  command '/usr/local/bin/aws-cleanup'
+  command '/usr/local/bin/aws-cleanup | logger -t aws-cleanup -p user.info'
 end
