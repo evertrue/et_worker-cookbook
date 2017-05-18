@@ -17,3 +17,5 @@ Gemfile.lock
 
 .kitchen/
 .kitchen.local.yml
+
+LATEST_CHANGELOG.md
