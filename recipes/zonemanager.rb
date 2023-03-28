@@ -35,18 +35,22 @@ node['route53']['zones'].each do |zone|
     end
   end
 
-  z_data.removed.each_with_index do |record, i|
-    route53_record "#{zone}_#{i}_#{record['name']}_#{record['type']}_delete" do
-      name                  record['name']
-      type                  record['type']
-      zone_id               data_bag_data[zone]['id']
-      aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
-      aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
-      action                :delete
+  # ET-18294 (https://evertroops.atlassian.net/browse/ET-18294)
+  # commenting this out so we can slowly move to Terraform control of DNS records and not
+  # have Chef conflicting with our process
+  #
+  # z_data.removed.each_with_index do |record, i|
+  #   route53_record "#{zone}_#{i}_#{record['name']}_#{record['type']}_delete" do
+  #     name                  record['name']
+  #     type                  record['type']
+  #     zone_id               data_bag_data[zone]['id']
+  #     aws_access_key_id     creds['access_key_id'] if creds.key? 'access_key_id'
+  #     aws_secret_access_key creds['secret_access_key'] if creds.key? 'secret_access_key'
+  #     action                :delete
 
-      # The following is required until
-      # https://github.com/chef-cookbooks/route53/issues/79 is addressed
-      not_if                'sleep 0.3; false', timeout: 1
-    end
-  end
+  #     # The following is required until
+  #     # https://github.com/chef-cookbooks/route53/issues/79 is addressed
+  #     not_if                'sleep 0.3; false', timeout: 1
+  #   end
+  # end
 end
