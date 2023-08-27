@@ -4,7 +4,7 @@ maintainer_email 'devops@evertrue.com'
 license          'All rights reserved'
 description      'Installs/Configures et_worker'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '5.1.1'
+version          '5.2.0'
 
 depends 'postfix', '~> 3.1'
 depends 'stale-node-checker', '= 1.0.2'
